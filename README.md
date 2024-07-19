@@ -1,6 +1,7 @@
 # react-lib-storybook
 
-    : React + Typescript + Storybook + Emotion
+    : Storybook의 프로젝트의 기본 세팅 
+      React + Typescript + Storybook + Emotion
 
 <br/>
 

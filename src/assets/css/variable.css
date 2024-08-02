@@ -1,0 +1,38 @@
+:root {
+  --main-color: #2f405a;
+  --sub-color1: rgb(137, 158, 190);
+  --disabled-color: rgb(235, 236, 236);
+
+  --main-btn-color: #2f405a;
+  --main-btn-color-hover: #2980b9;
+  --sub-btn-color1: rgb(137, 158, 190);
+  --sub-btn-color1-hover: rgb(134, 172, 228);
+  --disabled-btn-color: rgb(182, 185, 190);
+
+  --text-color: #000;
+  --main_font: 'notokr-kr';
+  --border-color: #cecece;
+
+  --default_box_shadow: 0 2px 6px rgb(0 0 0 / 10%);
+
+  --popup_background_bg: rgb(0 0 0 / 60%);
+  --popup_content_background: #fff;
+  --popup_content_padding: 20px;
+  --popup_content_border_radius: 10px;
+  --popup_content_title_color: #002b6a;
+  --popup_content_title_fontsize: 18px;
+
+  --table_shadow: 0 2px 6px rgb(0 0 0 / 10%);
+  --table_thead_color: #f4f4f8;
+  --table_th_height: 40px;
+  --table_th_font_size: 14px;
+  --table_th_font_weight: 500;
+  --table_border_color: #ddd;
+  --table_td_height: 40px;
+  --table_td_font_size: 14px;
+  --table_td_font_weight: 500;
+
+  --page_btns_nowbg: #e3e3eb;
+  --page_btns_nowcolor: #72747a;
+  --page_btns_color: #72747a;
+}

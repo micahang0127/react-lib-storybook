@@ -1,10 +1,9 @@
 import React from 'react';
-import GlobalStyle from '../src/assets/css/globalStyle.tsx';
+import '../src/assets/css/styles.css';
 
 export const decorators = [
   (Story) => (
     <>
-      <GlobalStyle />
       <Story />
     </>
   ),

@@ -10,9 +10,7 @@ export interface ButtonProps {
    * What background color to use
    */
   backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
+  /**  How large should the button be? */
   size?: 'small' | 'medium' | 'large';
   /**
    * Button contents
@@ -27,13 +25,7 @@ export interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
-  label,
-  ...props
-}: ButtonProps) => {
+export const Button = ({ primary = false, size = 'medium', backgroundColor, label, ...props }: ButtonProps) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
     <button

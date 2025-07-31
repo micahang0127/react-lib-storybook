@@ -15,9 +15,13 @@ export const CheckboxOne = ({
   disabled = false,
 }: CheckboxOneProps) => {
   return (
-    <label htmlFor={id} className="epk-checkbox">
+    <label htmlFor={id} className="lib-checkbox">
       <input id={id} type="checkbox" checked={checked} onChange={onChange} disabled={disabled} />
-      {label && <span>{label}</span>}
+      {label && (
+        <span className="lib-checkbox__label" style={{ margin: '0 5px' }}>
+          {label}
+        </span>
+      )}
     </label>
   );
 };

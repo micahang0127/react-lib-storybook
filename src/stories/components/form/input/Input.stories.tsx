@@ -10,7 +10,8 @@ export default {
     layout: 'centered',
     docs: {
       description: {
-        component: 'Input 컴포넌트',
+        component:
+          'Input 컴포넌트 <br/> 하단에서 다양한 버전들을 확인하실 수 있습니다. <br/> 아래 "Show code" 로 [사용 코드 예시] 를 확인하실 수 있습니다.',
       },
     },
   },

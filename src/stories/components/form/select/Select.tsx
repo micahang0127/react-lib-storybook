@@ -47,8 +47,6 @@ const Select = ({
 }: SelectProps) => {
   return (
     <>
-      {JSON.stringify(value)}///
-      {title && <p>{title}</p>}
       <select
         className="epk-select"
         value={!value ? value : columnValue ? value[columnValue] : JSON.stringify(value)}
@@ -87,6 +85,10 @@ const Select = ({
         })}
       </select>
       {errUsing && errMsg && <p css={cssWarningMsg}>{errMsg}</p>}
+      <br />
+      <br />
+      <div style={{ color: 'gray', fontSize: '14px' }}>Value(선택 값) : {JSON.stringify(value)}</div>
+      {/* {title && <p style={{ color: 'gray', fontSize: '13px' }}>설명 : {title}</p>} */}
     </>
   );
 };

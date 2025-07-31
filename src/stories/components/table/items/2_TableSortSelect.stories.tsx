@@ -71,7 +71,7 @@ Default.parameters = {
   docs: {
     description: {
       story:
-        '보통 Table 상단에 나타내는 정렬 처리 select <br/>  1. [default select1] 오름/내림차순 <br/> 2. [default select2] 한 페이지 당 나타낼 데이터 수 <br/> 3. [children props] {children}에 정렬의 기준이 되는 항목들을 나열한 select를 구현 ',
+        '보통 Table 상단에 나타내는 정렬 처리 select <br/>  1. [default select1] 오름/내림차순 <br/> 2. [default select2] 한 페이지 당 나타낼 데이터 수 <br/> 3. [children props] {children}에 정렬의 기준이 되는 항목들을 나열한 select를 구현 <br/><br/> 아래 "Show code" 로 [사용 코드 예시] 를 확인하실 수 있습니다.',
     },
     source: {
       code: `

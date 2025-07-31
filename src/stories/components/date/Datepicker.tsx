@@ -1,6 +1,7 @@
 import React from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
+import './styles.css';
 
 export interface DatepickerProps {
   date?: string | Date;
@@ -10,7 +11,7 @@ export interface DatepickerProps {
 }
 
 const Datepicker = ({ date, setDate, minDate, maxDate }: DatepickerProps) => {
-  return <Calendar className="epk-datepicker" value={date} onChange={setDate} minDate={minDate} maxDate={maxDate} />;
+  return <Calendar className="lib-datepicker" value={date} onChange={setDate} minDate={minDate} maxDate={maxDate} />;
 };
 
 export default Datepicker;

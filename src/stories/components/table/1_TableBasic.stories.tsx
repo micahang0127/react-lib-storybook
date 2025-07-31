@@ -108,7 +108,7 @@ const Template: StoryFn<TableBasicProps> = () => {
           tdKey: 'no',
         },
         {
-          width: '100px',
+          width: '500px',
           th: '이름',
           tdKey: 'name',
         },
@@ -118,7 +118,7 @@ const Template: StoryFn<TableBasicProps> = () => {
           tdKey: 'email',
         },
         {
-          width: '200px',
+          width: '250px',
           th: '핸드폰번호',
           tdKey: 'phone',
         },
@@ -140,7 +140,7 @@ const Template: StoryFn<TableBasicProps> = () => {
           ),
         },
         {
-          width: '250px',
+          width: '300px',
           th: 'th 커스텀 - thJsx props 사용',
           tdKey: 'mouseOver',
           thJsx: (t: any, i: number) => {
@@ -197,7 +197,6 @@ const Template: StoryFn<TableBasicProps> = () => {
       TableTopRightJsx={() => (
         <div style={{ display: 'flex' }}>
           <ExcelExport label="Excel Export" onClickExcel={onClickExcel} disabled={false} />
-          <button onClick={() => alert('clicked top right')}>버튼</button>
         </div>
       )}
     />
@@ -257,7 +256,8 @@ export const TableBasicDefault = Template.bind({});
 TableBasicDefault.parameters = {
   docs: {
     description: {
-      story: 'Table 기본 구성 <br/> : 테이블 / 정렬 Select / 페이징 / 엑셀출력',
+      story:
+        '[Table 라이브러리] : 아래 "Show code" 로 사용 방법을 확인하실 수 있습니다. <br/> [기능] : 원하는 데이터 표기 / 데이터 정렬 select / 페이징 / 엑셀출력 <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 엑셀출력(Excel Export) 버튼을 눌러보세요.',
     },
     source: {
       code: `
@@ -310,7 +310,7 @@ const TableBasicExample = () => {
           tdKey: 'no',                                                   // 항목의 key(다른 항목의 tdKey와 중복X)
         },
         {
-          width: '100px',
+          width: '50px',
           th: '이름',
           tdKey: 'name',
         },
@@ -320,7 +320,7 @@ const TableBasicExample = () => {
           tdKey: 'email',
         },
         {
-          width: '200px',
+          width: '250px',
           th: '핸드폰번호',
           tdKey: 'phone',
         },
@@ -342,7 +342,7 @@ const TableBasicExample = () => {
           ),
         },
         {
-          width: '250px',
+          width: '300px',
           th: 'th 커스텀 - thJsx props 사용',
           tdKey: 'mouseOver',
           thJsx: (t, i) => {                                              // td 직접 커스텀마이징하여 사용

@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styled.css';
 
 export interface TableSortSelectProps {
   children?: any;
@@ -20,24 +21,16 @@ const TableSortSelect = ({
   pageSizeOption = [10, 30, 50, 100],
 }: TableSortSelectProps) => {
   return (
-    <div className="epk-table-sort-select">
+    <div className="table-sort-select">
       {children}
       {sortValue && (
-        <select
-          className="epk-table-sort-select_item-select epk-table-sort-select_sort"
-          value={sortValue}
-          onChange={(e) => setSortValue(e.target.value)}
-        >
+        <select className="table-sort-select__select" value={sortValue} onChange={(e) => setSortValue(e.target.value)}>
           <option value="desc">{sortLabel[0]}</option>
           <option value="asc">{sortLabel[1]}</option>
         </select>
       )}
       {pageSize !== 0 && (
-        <select
-          className="epk-table-sort-select_item-select epk-table-sort-select_page-size"
-          value={pageSize}
-          onChange={(e) => setPageSize(e.target.value)}
-        >
+        <select className="table-sort-select__select" value={pageSize} onChange={(e) => setPageSize(e.target.value)}>
           {pageSizeOption.map((n, i) => (
             <option key={'pageSizeOption' + i} value={n}>
               {n}개

@@ -24,7 +24,7 @@ export const CheckboxList = ({
   };
 
   return (
-    <ul className="epk-checkbox-list">
+    <ul className="lib-checkbox-list">
       <li>
         <label htmlFor={'allchk_' + id}>
           <input
@@ -33,7 +33,7 @@ export const CheckboxList = ({
             onChange={(e) => setCheckedList(e.target.checked ? list : [])}
             checked={list.length === checkedList.length}
           />
-          <span>{labelAll}</span>
+          <span style={{ margin: '0 5px', color: 'blue' }}>{labelAll}</span>
         </label>
       </li>
       {list?.map((l, i) => {
@@ -46,7 +46,7 @@ export const CheckboxList = ({
                 onChange={(e) => onChangeEach(e, l)}
                 checked={checkedList.includes(l)}
               />
-              <span>{columnLabel ? l[columnLabel] : l}</span>
+              <span style={{ margin: '0 5px' }}>{columnLabel ? l[columnLabel] : l}</span>
             </label>
           </li>
         );

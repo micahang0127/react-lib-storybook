@@ -43,7 +43,7 @@ const RadioList = ({
                 setValue(value);
               }}
             />
-            <span>{columnLabel ? l[columnLabel] : l}</span>
+            <span style={{ margin: '0 5px' }}>{columnLabel ? l[columnLabel] : l}</span>
           </label>
         );
       })}

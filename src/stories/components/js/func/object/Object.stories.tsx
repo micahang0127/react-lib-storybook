@@ -2,12 +2,12 @@ import { Meta, StoryFn } from '@storybook/react';
 import { isNullObject } from '../func';
 
 export default {
-  title: 'JS/Func/Object',
+  title: 'JS/Func/ObjectCheckedNull',
   tags: ['autodocs'],
   parameters: {
     docs: {
       description: {
-        component: '[자주 쓰는 JS 함수] - Object 편',
+        component: '아래 "Show code" 로 [사용 코드 예시] 를 확인하실 수 있습니다.',
       },
     },
   },

@@ -2,13 +2,15 @@ import { Meta, StoryFn } from '@storybook/react';
 import ExcelExport, { ExcelExportProps } from './ExcelExport';
 
 export default {
-  title: 'Components/Utils/Excel/ExcelBasic',
+  title: 'Components/Utils/Excel/ExcelExport',
   component: ExcelExport,
   tags: ['autodocs'],
   parameters: {
+    layout: 'centered',
     docs: {
       description: {
-        component: 'Excel Export',
+        component:
+          'Excel Export : 엑셀 출력 버튼 <br/> 아래 버튼을 클릭하시면 엑셀파일이 다운로드 됩니다. <br/> 아래 "Show code" 로 [사용 코드 예시] 를 확인하실 수 있습니다.',
       },
     },
   },

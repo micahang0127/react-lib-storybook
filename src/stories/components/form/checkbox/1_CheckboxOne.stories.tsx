@@ -10,7 +10,7 @@ export default {
     layout: 'centered',
     docs: {
       description: {
-        component: '단일 Checkbox 컴포넌트',
+        component: '단일 Checkbox 컴포넌트 <br/> 아래 "Show code" 로 [사용 코드 예시] 를 확인하실 수 있습니다.',
       },
     },
   },

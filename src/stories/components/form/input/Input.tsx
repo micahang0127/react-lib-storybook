@@ -28,7 +28,7 @@ const Input = ({
   value,
   onChange = (value: any) => {},
   onBlur,
-  placeholder = '',
+  placeholder = '내용을 입력하세요.',
   disabled = false,
 }: InputProps) => {
   return (

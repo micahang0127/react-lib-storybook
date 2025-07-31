@@ -1,0 +1,24 @@
+.table-top-part {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table_body_wrap .table_box table {
+  border: 1px solid #b0adad;
+  margin: 10px;
+}
+.table_body_wrap .table_box table thead {
+  background: #cccaca;
+  font-size: 15px;
+  font-weight: bold;
+}
+.table_body_wrap .table_box table thead tr th {
+  padding: 10px;
+}
+.table_body_wrap .table_box table tbody {
+  font-size: 13px;
+}
+.table_body_wrap .table_box table tbody tr td {
+  padding: 10px;
+}
+/* ==[TableSortSelect.tsx]============================================================ */

@@ -3,12 +3,12 @@ import { sortArrayObjectNumber } from '../func';
 
 // [TODO] 한글, 영어 일때도 처리 필요 (현재는 숫자인 경우만 가능)
 export default {
-  title: 'JS/Func/Array',
+  title: 'JS/Func/ArraySort',
   tags: ['autodocs'],
   parameters: {
     docs: {
       description: {
-        component: '[자주 쓰는 JS 함수] - Array 편',
+        component: '아래 "Show code" 로 [사용 코드 예시] 를 확인하실 수 있습니다.',
       },
     },
   },
@@ -63,8 +63,7 @@ FuncArraySort.args = {
 FuncArraySort.parameters = {
   docs: {
     description: {
-      story:
-        '[배열 정렬] - 배열 오름차순, 내림차순 정렬 (sortType 미입력 시 오름차순)- [!] 현재는 값이 숫자일 때만 가능',
+      story: '[배열 정렬] - 배열의 오름차순, 내림차순 정렬 (sortType 미입력 시 오름차순)',
     },
     source: {
       code: `

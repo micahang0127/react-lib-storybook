@@ -10,7 +10,7 @@ export default {
     layout: 'centered',
     docs: {
       description: {
-        component: 'Select 컴포넌트',
+        component: 'Select 컴포넌트 <br/> 하단에서 여러 버전을 확인하실 수 있습니다.',
       },
     },
   },
@@ -80,7 +80,7 @@ const Template: StoryFn<SelectProps> = (args) => {
 
 export const SelectDefault = Template.bind({});
 SelectDefault.args = {
-  title: '주로 쓰는 Select - [Object + topOption]',
+  title: '주로 쓰는 Default Select',
   topOption: '전체',
   list: [
     {
@@ -105,7 +105,100 @@ SelectDefault.args = {
 SelectDefault.parameters = {
   docs: {
     description: {
-      story: '주로 쓰는 select',
+      story: '주로 쓰는 select <br/> 최상단 옵션 + Object(객체)형태 데이터로 처리',
+    },
+  },
+};
+
+export const SelectCodeAll = Template.bind({});
+SelectCodeAll.args = {
+  title: 'Select 코드 예시(전체)',
+  placeholder: '선택',
+  topOption: '전체',
+  topOptionValue: 'ALL',
+  columnValue: 'val',
+  columnLabel: 'text',
+  list: [
+    {
+      text: 'option1',
+      val: '01',
+    },
+    {
+      text: 'option2',
+      val: '02',
+    },
+    {
+      text: 'option3',
+      val: '03',
+    },
+    {
+      text: 'option4',
+      val: '04',
+    },
+  ],
+  errUsing: true,
+  errMsg: 'warning message',
+  disabledOptionList: {
+    key: 'val',
+    list: ['03', '04'],
+  },
+};
+SelectCodeAll.parameters = {
+  docs: {
+    description: {
+      story: 'Select 코드 예시 (전체) <br/> 아래 "Show code" 로 [사용 코드 예시] 를 확인하실 수 있습니다.',
+    },
+    source: {
+      code: `
+// [사용 코드 예시]
+const CheckboxListObjectExample = () =>  {
+  const [list, setList] = useState(
+    [
+      {
+        val: '01',
+        text: 'option1',
+      },
+      {
+        val: '02',
+        text: 'option2',
+      },
+      {
+        val: '03',
+        text: 'option3',
+      },
+      {
+        val: '04',
+        text: 'option4',
+      },
+    ]
+  );
+  const [value, setValue] = useState('');
+
+  const [selectDisabled, setSelectDisabled] = useState(false);
+  const [optionDisabledList, setOptionDisabledList] = useState(['03', '04'])
+
+  return <Select 
+              id="epk-select"
+              title="Select 전체 코드 예시"
+              placeholder="선택"
+              topOption="전체"
+              topOptionValue="ALL"
+
+              list={list} 
+              value={value} 
+              onChange={setValue} 
+              columnValue="val" 
+              columnLabel="text" 
+
+              errUsing={true}
+              errMsg="warning message"
+
+              dsiabled={selectDisabled}
+              disabledOptionList={{key: 'val', list: optionDisabledList}}
+          />;
+    );
+}
+`,
     },
   },
 };
@@ -500,99 +593,6 @@ SelectOptionDisabledArray.parameters = {
     ]
   }}
 />
-`,
-    },
-  },
-};
-
-export const SelectCode = Template.bind({});
-SelectCode.args = {
-  title: 'Select 전체 코드 예시 ',
-  placeholder: '선택',
-  topOption: '전체',
-  topOptionValue: 'ALL',
-  columnValue: 'val',
-  columnLabel: 'text',
-  list: [
-    {
-      text: 'option1',
-      val: '01',
-    },
-    {
-      text: 'option2',
-      val: '02',
-    },
-    {
-      text: 'option3',
-      val: '03',
-    },
-    {
-      text: 'option4',
-      val: '04',
-    },
-  ],
-  errUsing: true,
-  errMsg: 'warning message',
-  disabledOptionList: {
-    key: 'val',
-    list: ['03', '04'],
-  },
-};
-SelectCode.parameters = {
-  docs: {
-    description: {
-      story: 'Select 코드 예시',
-    },
-    source: {
-      code: `
-// [사용 코드 예시]
-const CheckboxListObjectExample = () =>  {
-  const [list, setList] = useState(
-    [
-      {
-        val: '01',
-        text: 'option1',
-      },
-      {
-        val: '02',
-        text: 'option2',
-      },
-      {
-        val: '03',
-        text: 'option3',
-      },
-      {
-        val: '04',
-        text: 'option4',
-      },
-    ]
-  );
-  const [value, setValue] = useState('');
-
-  const [selectDisabled, setSelectDisabled] = useState(false);
-  const [optionDisabledList, setOptionDisabledList] = useState(['03', '04'])
-
-  return <Select 
-              id="epk-select"
-              title="Select 전체 코드 예시"
-              placeholder="선택"
-              topOption="전체"
-              topOptionValue="ALL"
-
-              list={list} 
-              value={value} 
-              onChange={setValue} 
-              columnValue="val" 
-              columnLabel="text" 
-
-              errUsing={true}
-              errMsg="warning message"
-
-              dsiabled={selectDisabled}
-              disabledOptionList={{key: 'val', list: optionDisabledList}}
-          />;
-    );
-}
 `,
     },
   },

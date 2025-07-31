@@ -9,8 +9,10 @@ export interface ExcelExportProps {
 }
 const StyledButton = styled.button<ExcelExportProps>`
   background-color: ${({ disabled }) => (!disabled ? 'var(--sub-btn-color1)' : 'var(--disabled-btn-color)')};
-  color: #000
-  padding: 8px 16px
+  color: #000;
+  font-size: 13px;
+  padding: 5px 10px;
+  margin: 0 5px;
   border: none;
   border-radius: 4px;
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
@@ -29,9 +31,14 @@ const ExcelExport = ({ label = 'excel', onClickExcel = () => {}, disabled = fals
   };
 
   return (
-    <StyledButton className="epk-excel-export-btn" onClick={_onClickExcel} disabled={disabled}>
-      {label}
-    </StyledButton>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
+      <p style={{ color: 'gray', fontSize: '13px', marginBottom: '5px' }}>
+        &nbsp;&nbsp;&nbsp;* 아래 버튼을 클릭하시면, 엑셀파일이 다운로드 됩니다.{' '}
+      </p>
+      <StyledButton className="excel-export-btn" onClick={_onClickExcel} disabled={disabled}>
+        {label}
+      </StyledButton>
+    </div>
   );
 };
 

@@ -2,6 +2,7 @@
 import { css } from '@emotion/react';
 import React, { useState, useEffect } from 'react';
 import TablePaginationMui from './pagination/TablePaginationMui';
+import './styled.css';
 
 // [TODO] table scroll 처리, onClickTr 클릭 행 배경컬러(css) 처리
 
@@ -122,9 +123,9 @@ const TableBasic = ({
 
   return (
     <>
-      <div className="table_body mT30">
-        <div className="table_title_box" css={titleTopCss}>
-          <div>
+      <div>
+        <div className="table-top-part" css={titleTopCss}>
+          <div className="table-top-part__left">
             <TableTopLeftJsx />
           </div>
           <div>
@@ -136,13 +137,13 @@ const TableBasic = ({
           <div className="table_box">
             <table>
               <colgroup>
-                {checkboxObj.useCheckbox && <col width="60px" />}
+                {checkboxObj.useCheckbox && <col width="50px" />}
                 {tableData.map((t, i) => (
                   <col key={'tableCol' + i} width={t.width ? t.width : 'auto'} />
                 ))}
               </colgroup>
               <thead>
-                <tr>
+                <tr style={{ border: '1px solid' }}>
                   {checkboxObj.useCheckbox && checkboxObj.useCheckAll && (
                     <th>
                       <label htmlFor="tableThCheckAll" className="input_checkbox">

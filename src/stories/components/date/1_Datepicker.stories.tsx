@@ -6,6 +6,15 @@ export default {
   title: 'Components/Components/Date/Datepicker',
   component: Datepicker,
   tags: ['autodocs'],
+  parameters: {
+    layout: 'centered',
+    docs: {
+      description: {
+        component:
+          'Datepicker 컴포넌트 <br/> 하단에서 다양한 버전들을 확인하실 수 있습니다. <br/> 아래 "Show code" 로 [사용 코드 예시] 를 확인하실 수 있습니다.',
+      },
+    },
+  },
   argTypes: {
     date: {
       control: 'date',
@@ -27,34 +36,6 @@ export default {
 } as Meta;
 
 const Template: StoryFn<DatepickerProps> = (args) => <Datepicker {...args} />;
-
-export const DatepickerDefault = Template.bind({});
-DatepickerDefault.args = {
-  date: new Date().toISOString(),
-  setDate: () => {},
-};
-DatepickerDefault.parameters = {
-  docs: {
-    description: {
-      story: '단순 Datepicker',
-    },
-  },
-};
-
-export const DatepickerMinMax = Template.bind({});
-DatepickerMinMax.args = {
-  date: new Date().toISOString(),
-  setDate: () => {},
-  minDate: new Date(new Date().setDate(new Date().getDate() - 5)),
-  maxDate: new Date(new Date().setDate(new Date().getDate() + 5)),
-};
-DatepickerMinMax.parameters = {
-  docs: {
-    description: {
-      story: '클릭 가능한 최소날짜, 최대날짜 설정',
-    },
-  },
-};
 
 export const DatepickerCode = Template.bind({});
 DatepickerCode.args = {
@@ -87,6 +68,34 @@ const DatepickerExample = () =>  {
     );
 }
 `,
+    },
+  },
+};
+
+export const DatepickerDefault = Template.bind({});
+DatepickerDefault.args = {
+  date: new Date().toISOString(),
+  setDate: () => {},
+};
+DatepickerDefault.parameters = {
+  docs: {
+    description: {
+      story: '단순 Datepicker',
+    },
+  },
+};
+
+export const DatepickerMinMax = Template.bind({});
+DatepickerMinMax.args = {
+  date: new Date().toISOString(),
+  setDate: () => {},
+  minDate: new Date(new Date().setDate(new Date().getDate() - 5)),
+  maxDate: new Date(new Date().setDate(new Date().getDate() + 5)),
+};
+DatepickerMinMax.parameters = {
+  docs: {
+    description: {
+      story: '클릭 가능한 최소날짜, 최대날짜 설정',
     },
   },
 };

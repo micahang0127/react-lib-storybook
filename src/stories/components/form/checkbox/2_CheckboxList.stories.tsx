@@ -10,7 +10,8 @@ export default {
     layout: 'centered',
     docs: {
       description: {
-        component: 'Checkbox 리스트 컴포넌트',
+        component:
+          'Checkbox 리스트 컴포넌트  <br/> 상단 "전체" 체크박스를 클릭해 보세요. <br/><br/> 하단에서 아래 내용을 확인하실 수 있습니다. <br> 1.Checkbox List And All Object - 객체 형태의 데이터 <br/> 2. Checkbox List And All Array - 배열 형태의 데이터 <br/><br/> 아래 "Show code" 로 [사용 코드 예시] 를 확인하실 수 있습니다.',
       },
     },
   },
@@ -62,7 +63,7 @@ CheckboxListAndAllObject.args = {
 CheckboxListAndAllObject.parameters = {
   docs: {
     description: {
-      story: 'CheckboxList 모든 항목',
+      story: '객체 형태의 데이터로 전달',
     },
     source: {
       code: `
@@ -100,6 +101,9 @@ CheckboxListAndAllArray.args = {
 };
 CheckboxListAndAllArray.parameters = {
   docs: {
+    description: {
+      story: '배열 형태의 데이터로 전달',
+    },
     source: {
       code: `
 // [사용 코드 예시]

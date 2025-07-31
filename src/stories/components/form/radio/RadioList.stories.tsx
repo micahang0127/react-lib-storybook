@@ -10,7 +10,8 @@ export default {
     layout: 'centered',
     docs: {
       description: {
-        component: '라디오 컴포넌트',
+        component:
+          '라디오 버튼 컴포넌트 <br/> 하단에서 아래 내용들을 확인하실 수 있습니다. <br> 1. 객체(Object) 형태의 데이터로 처리 <br/> 2. 배열(Array) 형태의 데이터로 처리 <br/> 3. 사용 코드 예시',
       },
     },
   },
@@ -90,7 +91,7 @@ RadioCode.args = {
 RadioCode.parameters = {
   docs: {
     description: {
-      story: 'Radio 코드 예시',
+      story: '라디오 버튼 컴포넌트 - 사용 코드 예시',
     },
     source: {
       code: `

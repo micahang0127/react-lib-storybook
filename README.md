@@ -23,6 +23,51 @@
 
 <br/>
 
+### [배포]()
+
+: chromatic으로 배포 <br><br>
+
+배포 접속 URL : <br>
+https://687790954d023296e6bc7b70-qsqfgfnjlo.chromatic.com/?path=/docs/components-table-tablebasic--docs
+
+<br><br>
+
+1. chromatic 설치 <br/>
+   > $ yarn add -D chromatic
+
+<br>
+
+2. chromatic 홈페이지 접속 <br>
+   &nbsp;&nbsp; -> 해당 프로젝트가 있는 git repository의 github 아이디로 로그인
+
+<br><br>
+
+3. 연결되면 Publish your Storybook 부분에 내 token(비밀유지) 과 함께 아래 명령어가 나옴<br>-> 복사하여 명령어 실행.<br/>
+   > npx chromatic --project-token=<mytoken>
+
+<br><br>
+
+4. chromatic 실행 -> 맨 밑에 나오는 url 링크 접속(빌드된 Chromatic 페이지 주소)
+   > $ yarn chromatic
+
+<br><br>
+
+5. 접속한 페이지(빌드된 Chromatic 페이지 주소) 아래 버튼 "View Storybook" 클릭<br>
+   &nbsp;&nbsp; -> 배포된 storybook url 로 연결 (해다 링크가 배포된 URL임)
+
+<br><br>
+
+[배포시참고] <br>
+https://velog.io/@93minki/Storybook-Chromatic-%EC%9C%BC%EB%A1%9C-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0
+https://storybook.js.org/tutorials/intro-to-storybook/react/ko/deploy/
+
+<br>
+[배포 완료 결과] <br>
+    [chromatic] : https://www.chromatic.com/builds?appId=687790954d023296e6bc7b70&branch=master
+    [배포 접속 URL] : https://687790954d023296e6bc7b70-rczezrbetc.chromatic.com/?path=/story/introduction--default
+
+<br/>
+
 ### [이슈]()
 
     [*] ComponentMeta
@@ -399,3 +444,5 @@
 설치 : https://velog.io/@kimhyo_0218/Storybook-Emotion-%EA%B3%BC-Storybook-TypeScript-%EB%A1%9C-%EB%94%94%EC%9E%90%EC%9D%B8-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0-%EC%B4%88%EA%B8%B0-%EC%85%8B%ED%8C%85%ED%8E%B8-
 <br/><br/>
 emotion 세팅 : https://velog.io/@kimhyo_0218/Storybook-emotion%EC%9C%BC%EB%A1%9C-storybook-%EA%B8%80%EB%A1%9C%EB%B2%8C-%EC%8A%A4%ED%83%80%EC%9D%BC-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0-reset-css
+<br><br>
+배포 :https://velog.io/@93minki/Storybook-Chromatic-%EC%9C%BC%EB%A1%9C-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0

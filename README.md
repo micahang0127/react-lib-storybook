@@ -28,7 +28,7 @@
 : chromatic으로 배포 <br><br>
 
 배포 접속 URL : <br>
-https://687790954d023296e6bc7b70-qsqfgfnjlo.chromatic.com/?path=/docs/components-table-tablebasic--docs
+https://687790954d023296e6bc7b70-rczezrbetc.chromatic.com/?path=/story/introduction--default
 
 <br><br>
 
